@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.salman {
+    background-color: black;
+    color: rgb(138, 69, 69);
+}
+
+.horizontal {
+    border: 5px solid black;
+    /* grid box of css */
+    display: flex;
+    list-style: none;
+}
+
+.horizontal li {
+    /* top bottom left right */
+    /* pattern TRBL */
+    margin: 0px 10px 0px 10px;
+}
+
+#hover-effect{
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+
+#hover-effect:hover{
+    background-color: rgb(62, 62, 129);
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .horizontal{
+        background-color: green;
+        display: block;
+    }
+}
