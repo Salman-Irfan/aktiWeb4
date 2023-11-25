@@ -1,0 +1,15 @@
+.heading-2-external{
+    color: aqua;
+    /* t r b l */
+    margin: 20px 20px 40px 54px;
+    padding: 50px;
+    /* t r b l */
+    border: 1px solid black;
+}
+
+
+/* pseudo selectors */
+.heading-2-external:hover {
+    cursor: pointer;
+    
+}
