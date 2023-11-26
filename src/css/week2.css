@@ -22,22 +22,47 @@
     margin: 0px 10px 0px 10px;
 }
 
-#hover-effect{
+#hover-effect {
     background-color: blue;
     color: white;
     padding: 5px;
 }
 
-#hover-effect:hover{
+#hover-effect:hover {
     background-color: rgb(62, 62, 129);
     color: black;
     padding: 5px;
     cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
-    .horizontal{
+/* day 2 css revision */
+
+.h-effect {
+    margin-top: 10px;
+}
+
+.h-effect:hover {
+    font-weight: bolder;
+    cursor: pointer;
+}
+.a-line-khatam {
+    text-decoration: none;
+    cursor: default;
+    border: 2px solid green;
+    padding: 5px;
+}
+
+.a-line-khatam:hover {
+    font-weight: bolder;
+    cursor: pointer;
+    color: blueviolet;
+    
+}
+
+@media screen and (max-width: 425px) {
+    .horizontal {
         background-color: green;
         display: block;
+        
     }
 }
