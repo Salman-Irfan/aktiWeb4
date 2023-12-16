@@ -8,3 +8,6 @@ let funcArr = [
 let indexOne = funcArr[1](8)
 console.log(indexOne)
 
+// array destructuring
+const [alphabet, func, ...rest] = funcArr
+console.log(rest)

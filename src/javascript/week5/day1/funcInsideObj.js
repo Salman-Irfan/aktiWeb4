@@ -21,4 +21,12 @@ let fbUser = {
 };
 
 let fullName = fbUser.getFullName();
-console.log(fullName);
+// console.log(fullName);
+// object destructuring
+// array destructuring
+
+// object destructuring
+const {firstName, lastName, ...rest} = fbUser
+// console.log(firstName)
+// console.log(lastName)
+console.log(rest)
