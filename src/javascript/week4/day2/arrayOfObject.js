@@ -34,6 +34,21 @@ let fbUser = {
                 ee: 'smj ni a ri'
             }
         ],
+    },
+    abdulHannan: {
+        name: 'ee',
+        email: 'englishExpert@gmail.com',
+        password: 'password',
+        friendList: ['qasim', 'hannan', 'abu qasim', 'nawaz'],
+        blockedFrom: ['hurrerah'],
+        blockedTo: ['chahat'],
+        messenger: [
+            {
+                salman: 'hi',
+                ee: 'smj ni a ri'
+            },
+            
+        ],
     }
 }
 console.log(fbUser);
