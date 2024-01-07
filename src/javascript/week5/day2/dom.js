@@ -21,7 +21,7 @@ firstLiUtem.style.backgroundColor
 
 // console.log(document.querySelectorAll("li"))
 
-const submitButton = (document.getElementById("seven-up"))
+const submitButton = (document.getElementById("sign-up"))
 console.dir(submitButton)
 // submitButton.addEventListener("click", (e) =>{
 //     e.preventDefault();
@@ -47,7 +47,7 @@ myForm.addEventListener("submit", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    // function mein jo kam kran aho wo yahan chipka do
+    // any functionality that we want to perform on page load
     console.log("on page load")
 })
 
