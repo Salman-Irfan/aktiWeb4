@@ -2,14 +2,14 @@ import axios from 'axios';
 import React, { useState } from 'react';
 
 const AddProduct = () => {
-    // idr cher khani nhi karni
     const [formdata, setFormdata] = useState({
         title: '',
         description: '',
         price: '',
         productFile: null, // For storing the selected image file
+        videoFile: null,   // For storing the selected video file
     });
-    // idr b cher khani nhi krni
+
     // Input changing function
     const handleChange = (e) => {
         setFormdata({
@@ -22,7 +22,7 @@ const AddProduct = () => {
     const handleFileChange = (e) => {
         setFormdata({
             ...formdata,
-            productFile: e.target.files[0], // Store the selected file
+            [e.target.name]: e.target.files[0], // Store the selected file using the input name
         });
     };
 
@@ -37,6 +37,7 @@ const AddProduct = () => {
             formData.append('description', formdata.description);
             formData.append('price', formdata.price);
             formData.append('productFile', formdata.productFile);
+            formData.append('videoFile', formdata.videoFile);
 
             // Send the FormData to the server using axios
             const response = await axios.post('http://localhost:3000/api/v1/add-product', formData);
@@ -53,52 +54,86 @@ const AddProduct = () => {
 
     return (
         <>
-            {/* riwayati html */}
-            <div>Add Product</div>
-            <form onSubmit={handleSubmit}>
-                {/* title */}
-                <input
-                    className='' // apn mrazi ki classes 
-                    type="text"
-                    name="title"
-                    id="title"
-                    placeholder="Title"
-                    value={formdata.title} // input tag k ander value - 
-                    onChange={handleChange} // input tag k andr onChange - in ko nhi cherna
-                    required
-                />
-                {/* description */}
-                <input
-                    type="text"
-                    name="description"
-                    id="description"
-                    placeholder="Description"
-                    value={formdata.description}
-                    onChange={handleChange}
-                    required
-                />
-                {/* price */}
-                <input
-                    type="number"
-                    name="price"
-                    id="price"
-                    placeholder="Price"
-                    value={formdata.price}
-                    onChange={handleChange}
-                    required
-                />
-                {/* image file input */}
-                <input
-                    type="file"
-                    name="productFile"
-                    id="productFile"
-                    accept="image/*" // Specify accepted file types (images in this case)
-                    onChange={handleFileChange}
-                    required
-                />
-                {/* submit */}
-                <button type="submit">Add Product</button>
-            </form>
+            <div className="container mt-3">
+                <h2>Add Product</h2>
+                <form onSubmit={handleSubmit}>
+                    {/* title */}
+                    <div className="mb-3">
+                        <label htmlFor="title" className="form-label">Title</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="title"
+                            name="title"
+                            placeholder="Title"
+                            value={formdata.title}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+
+                    {/* description */}
+                    <div className="mb-3">
+                        <label htmlFor="description" className="form-label">Description</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="description"
+                            name="description"
+                            placeholder="Description"
+                            value={formdata.description}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+
+                    {/* price */}
+                    <div className="mb-3">
+                        <label htmlFor="price" className="form-label">Price</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            id="price"
+                            name="price"
+                            placeholder="Price"
+                            value={formdata.price}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+
+                    {/* image file input */}
+                    <div className="mb-3">
+                        <label htmlFor="productFile" className="form-label">Image File</label>
+                        <input
+                            type="file"
+                            className="form-control"
+                            id="productFile"
+                            name="productFile"
+                            accept="image/*"
+                            onChange={handleFileChange}
+                            required
+                        />
+                    </div>
+
+                    {/* video file input */}
+                    <div className="mb-3">
+                        <label htmlFor="videoFile" className="form-label">Video File</label>
+                        <input
+                            type="file"
+                            className="form-control"
+                            id="videoFile"
+                            name="videoFile"
+                            accept="video/*"
+                            onChange={handleFileChange}
+                            required
+                        />
+                    </div>
+
+                    {/* submit */}
+                    <button type="submit" className="btn btn-primary">Add Product</button>
+                </form>
+            </div>
         </>
     );
 };

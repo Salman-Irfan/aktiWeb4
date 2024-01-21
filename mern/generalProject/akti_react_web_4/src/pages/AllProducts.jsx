@@ -49,7 +49,6 @@ const AllProducts = () => {
                         <p className=''>Product Title: {product.title}</p> 
                         <p className=''>
                             {product.description}
-
                         </p>
                         <p className=''>Price: {product.price}</p>
                         <div className=''>

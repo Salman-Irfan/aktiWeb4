@@ -10,7 +10,7 @@ const ProductDetails = () => {
     const fetchProductDetails = async () => {
         try {
             const response = await axios.get(`http://localhost:3000/api/v1/product/${id}`);
-            console.log(response.data); // Log the response data to inspect it
+            console.log(response.data);
 
             if (response.data.success) {
                 setProduct(response.data.product);
@@ -30,16 +30,31 @@ const ProductDetails = () => {
             {product ? (
                 <div>
                     <div>
+                        {/* Video controls */}
+                        {product.productVideoLink && (
+                            <div className='container'>
+                                <video width={800} controls autoPlay>
+                                    <source src={product.productVideoLink} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        )}
+                    </div>
+                    {/* Display product details */}
+                    <div>
                         <img src={product.productImageLink} alt={product.title} width={400} />
                     </div>
                     <p>Title: {product.title}</p>
-                    <p> Description: {product.description}</p>
+                    <p>Description: {product.description}</p>
                     <p>Price: {product.price}</p>
+
+                    
                 </div>
             ) : (
                 <p>No product details available</p>
             )}
-            {/* update button */}
+
+            {/* Update button */}
             <Link className="nav-link" to={`/update-product/${id}`}>
                 <button type="button">Update</button>
             </Link>
