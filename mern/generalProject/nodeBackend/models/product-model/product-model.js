@@ -6,6 +6,7 @@ const productSchema = new Schema({
     description: String,
     price: Number,
     productImageLink: String,
+    productVideoLink: String,
 }, {
     timestamps: true,
 });
