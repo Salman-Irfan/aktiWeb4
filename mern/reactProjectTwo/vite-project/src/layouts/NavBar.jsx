@@ -22,10 +22,13 @@ const NavBar = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contact">Contact Us</Link>
                             </li>
-                            {/* link ends */}
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about">About Us</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/add-product">Add Product</Link>
+                            </li>
+                            {/* link ends */}
                         </ul>
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

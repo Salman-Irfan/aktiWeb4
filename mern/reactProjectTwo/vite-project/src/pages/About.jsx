@@ -9,24 +9,16 @@ const About = () => {
                 <div className='container'>
                     <form className='my-4 py-4'>
                         <h1 className='text-warning text-center'>Enter Product Information</h1>
-                        {/* title start */}
-                        <div className="mb-3 text-white">
-                            <label htmlFor="text" className="form-label">Product Title</label>
-                            <input type="text" className="form-control" id="text" placeholder="Product Title" />
-                        </div>
-                        {/* title end */}
+                        
                         {/* desc start */}
                         <div className="mb-3 text-white">
                             <label htmlFor="text" className="form-label">Product Description</label>
                             <textarea type="text" className="form-control" id="text" placeholder="Product Title" />
                         </div>
                         {/* desc end */}
-                        {/* price start */}
-                        <div className="mb-3 text-white">
-                            <label htmlFor="price" className="form-label">Product Price</label>
-                            <input type="number" className="form-control" id="text" placeholder="Product Title" />
-                        </div>
-                        {/* price end */}
+                        {/* file input */}
+                        {/* <input type="file" name="file" id="file" /> */}
+                        <button type="submit" className='btn btn-primary'>Create Post</button>
                     </form>
                 </div>
             </div>
