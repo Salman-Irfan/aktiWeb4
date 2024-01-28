@@ -4,6 +4,9 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Home from "./pages/Home"
 import AddProduct from "./pages/AddProduct"
+import AllProducts from "./pages/AllProducts"
+import ProductDetails from "./pages/ProductDetails"
+import UpdateProduct from "./pages/UpdateProduct"
 // import './App.css'
 function App() {
 
@@ -15,6 +18,11 @@ function App() {
         <Route exact path='/about' element={<About />} />
         <Route exact path='/contact' element={<Contact />} />
         <Route exact path='/add-product' element={<AddProduct />} />
+        <Route exact path='/all-products' element={<AllProducts />} />
+        {/* dynamic route for product details */}
+        <Route exact path='/product/:id' element={<ProductDetails />} />
+        {/* update */}
+        <Route exact path='/product/update/:id' element={<UpdateProduct />} />
       </Routes>
     </>
   )

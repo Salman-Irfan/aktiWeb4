@@ -52,6 +52,7 @@ const AddProduct = () => {
                             className="form-control"
                             name="description"
                             id="description"
+                            placeholder='Description'
                             value={description}
                             rows={3}
                             onChange={handleDescriptionChange}
