@@ -20,12 +20,19 @@ const UpdateProduct = () => {
     }
     // function to fetch product fields
     const fetchProductDetails = async () => {
-        const response = await axios.get(`http://localhost:3000/product/${id}`)
-        if (response.data.success) {
-            setTitle(response.data.product.productTitle)
-            setDescription(response.data.product.productDescription)
-            setPrice(response.data.product.productPrice)
+        
+        try {
+            const response = await axios.get(`http://localhost:3000/product/${id}`)
+            if (response.data.success) {
+                setTitle(response.data.product.productTitle)
+                setDescription(response.data.product.productDescription)
+                setPrice(response.data.product.productPrice)
+            }
+        } catch (error) {
+            console.log(error)
         }
+        
+        
     }
     useEffect(() => {
         fetchProductDetails()
