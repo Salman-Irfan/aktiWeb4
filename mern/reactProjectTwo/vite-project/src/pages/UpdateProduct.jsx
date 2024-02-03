@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import BASE_URL, {  APIVersion1 } from '../constants/urls/urls'
 
 const UpdateProduct = () => {
     const params = useParams()
@@ -22,7 +23,7 @@ const UpdateProduct = () => {
     const fetchProductDetails = async () => {
         
         try {
-            const response = await axios.get(`http://localhost:3000/product/${id}`)
+            const response = await axios.get(`${BASE_URL}${APIVersion1}/product/${id}`)
             if (response.data.success) {
                 setTitle(response.data.product.productTitle)
                 setDescription(response.data.product.productDescription)
@@ -38,6 +39,9 @@ const UpdateProduct = () => {
         fetchProductDetails()
     }, [])
 
+    // 2 conventions
+    // 1. const updateHandler
+    // 2. const handleUpdate
     const handleUpdate = async (e) => {
         e.preventDefault()
         const updatedProductData = {
@@ -46,7 +50,7 @@ const UpdateProduct = () => {
             productPrice: price,
         }
         console.log(updatedProductData)
-        const response = await axios.put(`http://localhost:3000/update/${id}`, updatedProductData)
+        const response = await axios.put(`${BASE_URL}${APIVersion1}/update/${id}`, updatedProductData)
         console.log(response)
         if (response.data.success) {
             alert(`product updated successfully`)

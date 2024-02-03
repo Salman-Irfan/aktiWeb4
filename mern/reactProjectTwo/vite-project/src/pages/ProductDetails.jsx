@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import BASE_URL, {  APIVersion1 } from '../constants/urls/urls'
 
 const ProductDetails = () => {
     const [product, setProduct] = useState({})
@@ -10,7 +11,7 @@ const ProductDetails = () => {
 
     const fetchProduct = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/product/${id}`)
+            const response = await axios.get(`${BASE_URL}${APIVersion1}/product/${id}`)
             console.log(response)
             setProduct(response.data.product)
         } catch (error) {
