@@ -1,3 +1,7 @@
+const dotenv = require('dotenv')
+// using environment variables
+const config = dotenv.config
+config()
 // const mongoose = require('mongoose')
 
 // // hard constants
@@ -19,7 +23,7 @@
 const mongoose = require('mongoose')
 
 
-const MONGO_DB_URI = "mongodb://127.0.0.1:27017/aktiWeb4"
+const MONGO_DB_URI = process.env.MONGO_DB_URI
 
 const connectToMongoDb = async ()=> {
     try {

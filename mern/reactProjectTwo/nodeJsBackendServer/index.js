@@ -1,14 +1,17 @@
 const express = require('express')
 const connectToMongoDb = require('./config/mongoDb')
-const SocialMediaPost = require('./models/socialMedia/SocialMediaPost')
-const createPostController = require('./controllers/socialMediaControllers/createPostController')
-const addProductController = require('./controllers/productControllers/addProductController')
 const cors = require('cors')
+const router = require('./routes')
+const dotenv = require('dotenv')
 
 const app = express()
 app.use(express.json()) //
 app.use(cors())
-const port = 3000
+// using environment variables
+const config = dotenv.config
+config()
+
+const PORT = process.env.PORT || 3000
 
 connectToMongoDb()
 
@@ -22,19 +25,16 @@ app.get('/', (req, res) => {
 })
 
 
-app.post('/about', (req, res) => {
-    res.send('about page from node js')
-})
 
 
+// defined routes 
+app.use( '/', router)
 
 // route to create sm post
-app.post('/create-post', createPostController)
+// app.post('/create-post', createPostController)
 
 
-app.post('/add-product', addProductController)
 
-
-app.listen(port, () => {
-    console.log(`Example app listening on port http://localhost:${port}`)
+app.listen(PORT, () => {
+    console.log(`Example app listening on PORT http://localhost:${PORT}`)
 })

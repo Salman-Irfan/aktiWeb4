@@ -8,6 +8,19 @@ const addProductController = async (req, res) => {
         // console.log(req.body)
         // destructuring the req.body
         const { productTitle, productDescription, productPrice } = req.body
+        if (!productTitle){
+            return res.json({
+                success: false,
+                message: 'Title can not be empty'
+            })
+        }
+        // description 10 lafzon se kam na ho
+        if (productDescription.length < 10){
+            return res.json({
+                success: false,
+                message: 'Description can not be less than 10'
+            })
+        }
         // console.log(productTitle, productDescription, productPrice)
 
         // to save in
