@@ -35,12 +35,24 @@
 
 <table>
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
+    <th>Request</th>
+    <th>Response</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
+    <td>
+        <pre>
+            {
+                "title": "dell"
+            }
+        </pre>
+    </td>
+    <td>
+        <pre>
+            {
+                success: true
+            }
+        </pre>
+    </td>
     
   </tr>
 </table>
