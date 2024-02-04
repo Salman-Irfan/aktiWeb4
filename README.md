@@ -44,24 +44,24 @@
 <tr>
     <!-- request.body -->
     <td>
-    <pre>
+    <code>
     {
         "title": "dell",
         "description": "dell ka laptop bht acha hai",
         "price": "100"
     }
-    </pre>
+    </code>
 
     </td>
     <!-- response.json -->
 
     <td>
-    <pre>
+    <code>
         {
             success: true,
             message: "product add ho gai hai ap ki"
         }
-    </pre>
+    </code>
     </td>
 
 </tr>
