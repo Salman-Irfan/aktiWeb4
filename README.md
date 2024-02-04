@@ -23,3 +23,24 @@
     controller jis mei main business logc liki hai
     models ka folder, jis mei database k schema liky hain
 </p>
+
+<h2>Apis</h2>
+
+<h3> Server Address: http://localhost:3000 </h3>
+
+<h4>Api to add add product</h4>
+
+<p>Method: post</p>
+<p>endPoint: /api/v1/add-product</p>
+
+<table>
+<!-- table header -->
+<tr>
+    <th>Request</th>
+    <th>Response</th>
+</tr>
+
+<!-- table data -->
+
+
+</table>
