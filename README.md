@@ -44,21 +44,26 @@
 <tr>
     <!-- request.body -->
     <td>
+    <pre>
     {
         "title": "dell",
         "description": "dell ka laptop bht acha hai",
         "price": "100"
     }
+    </pre>
 
     </td>
     <!-- response.json -->
 
     <td>
+    <pre>
         {
             success: true,
             message: "product add ho gai hai ap ki"
         }
+    </pre>
     </td>
+
 </tr>
 
 </table>
