@@ -34,34 +34,36 @@
 <p>endPoint: /api/v1/add-product</p>
 
 <table>
-        <!-- table header -->
-        <tr>
-            <th>Request</th>
-            <th>Response</th>
-        </tr>
+<!-- table header -->
+<tr>
+    <th>Request</th>
+    <th>Response</th>
+</tr>
 
-        <!-- table data -->
-        <tr>
-            <!-- request.body -->
-            <td>
-            <pre>
-{
-    "title": "dell",
-    "description": "dell ka laptop bht acha hai",
-    "price": "100"
-}
-            </pre>
-            </td>
+<!-- table data -->
+<tr>
+    <!-- request.body -->
+    <td>
+    <pre>
+    {
+        "title": "dell",
+        "description": "dell ka laptop bht acha hai",
+        "price": "100"
+    }
+    </pre>
 
-            <!-- response.json -->
-            <td>
-            <pre>
-{
-    "success": true,
-    "message": "product add ho gai hai ap ki"
-}
-            </pre>
-            </td>
-        </tr>
+    </td>
+    <!-- response.json -->
 
-    </table>
+    <td>
+    <pre>
+        {
+            success: true,
+            message: "product add ho gai hai ap ki"
+        }
+    </pre>
+    </td>
+
+</tr>
+
+</table>
