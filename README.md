@@ -9,3 +9,7 @@
 <p>Pges => urls</p>
 <p>Api calls from services</p>
 <p>Constanst folder contains the base url, api version and api endpoints</p>
+
+<h2>Screen Shots</h2>
+
+<img src='./assets/images/vsCodeExyension.png' />
