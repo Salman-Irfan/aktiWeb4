@@ -13,3 +13,13 @@
 <h2>Screen Shots</h2>
 
 <img src='./assets/images/vsCodeExyension.png' />
+
+<h1> Backend Documentation</h1>
+
+<p> Backend ka folder structure</p>
+<p>index.js starting point
+    config k folder mei db connection
+    routes k folder, 
+    controller jis mei main business logc liki hai
+    models ka folder, jis mei database k schema liky hain
+</p>
