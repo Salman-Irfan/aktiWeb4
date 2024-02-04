@@ -41,6 +41,24 @@
 </tr>
 
 <!-- table data -->
+<tr>
+    <!-- request.body -->
+    <td>
+    {
+        "title": "dell",
+        "description": "dell ka laptop bht acha hai",
+        "price": "100"
+    }
 
+    </td>
+    <!-- response.json -->
+
+    <td>
+        {
+            success: true,
+            message: "product add ho gai hai ap ki"
+        }
+    </td>
+</tr>
 
 </table>
