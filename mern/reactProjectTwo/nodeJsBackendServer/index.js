@@ -6,6 +6,12 @@ const dotenv = require('dotenv')
 
 const app = express()
 app.use(express.json()) //
+
+// add middleware to parse form data instead of JSON
+app.use(express.urlencoded({ extended: true }));
+// use a static folder
+app.use(express.static('public'));
+
 app.use(cors())
 // using environment variables
 const config = dotenv.config
